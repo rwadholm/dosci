@@ -157,7 +157,7 @@ if(isset($new) && ctype_alnum($new)){
     
     <footer>
     	<p><a href="http://github.com/rwadholm/dosci">Open Source</a> | <a href="mailto:rwadholm@indiana.edu">Contact</a><br />
-    	<a href="create.php">Create your own DOSCI App</a></p>
+    	<a href="/create.php">Create your own DOSCI App</a></p>
     </footer>
 </body>
 </html>
