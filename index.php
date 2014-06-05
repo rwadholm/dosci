@@ -4,14 +4,17 @@ http://www.bob.wadholm.com/licenses.shtml */
 
 $home = 'http://'. $_SERVER['HTTP_HOST'] .'/';
 $site = 'index';
-$new =  $_REQUEST['site'];
-if(isset($new) && ctype_alnum($new)){
+$new = $_REQUEST['site'];
+if(isset($new) && !ctype_alnum($new)){
+	$new = ctype_alnum($new);
+}
+if(isset($new)){
 	if(file_exists("json/". $new .".json")){
-		$site = $_REQUEST['site'];
+		$site = $new;
 	} else {
 		header("LOCATION: ". $home);
 	}
-}
+} 
 ?>
 <!doctype html>
 <html>
